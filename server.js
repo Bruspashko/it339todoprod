@@ -6,6 +6,14 @@ const bodyParser = require('body-parser');
 const schema = require('./schema');
 const cors = require('cors')
 const app = express();
+const basicAuth = require('express-basic-auth')
+
+app.use(basicAuth({
+users: { 'admin': 'supersecret' }
+ , challenge: true
+}))
+
+
 app.use(cors())
 // Replace with your mongoLab URI
 const MONGO_URI = 'mongodb+srv://it339-ostap:vbc5NasuvsY6Wwh8@cluster0-0rdwi.gcp.mongodb.net/todos?retryWrites=true&w=majority';
