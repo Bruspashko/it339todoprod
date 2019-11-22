@@ -38,5 +38,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(process.env.PORT, () => {
-  console.log('Listening at '.process.env.PORT);
+  console.log('Listening');
 });
