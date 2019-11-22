@@ -37,6 +37,6 @@ app.get('/', (req, res) => {
   res.redirect('/graphql');
 });
 
-app.listen(8080, () => {
-  console.log('Listening at 8080');
+app.listen(process.env.PORT, () => {
+  console.log('Listening at '.process.env.PORT);
 });
